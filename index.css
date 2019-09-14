@@ -1,0 +1,41 @@
+body, div{
+    margin:0;
+    padding:0;
+}
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+div#topbar{
+    height: 48px;
+    border-bottom: 2px solid gray;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+div#topbar > *{
+    display: inline;
+
+}
+
+div#grid {
+    height: calc(100% - 48px);
+    width: 100%;
+    display: grid;
+    grid-gap: 2px;
+    background: #808080;
+    align-items: stretch;
+    justify-items: stretch;
+    justify-content: center;
+    align-content: start;
+}
+div#grid > .box{
+    background: #FFF;
+    transition: background 0.5s;
+    border-radius: 1px;
+}
+div#grid > .box[data-tile="wall"]{
+    background: #000;
+}
