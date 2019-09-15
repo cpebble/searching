@@ -39,3 +39,12 @@ div#grid > .box{
 div#grid > .box[data-tile="wall"]{
     background: #000;
 }
+div#grid > .box[data-tile="start"]{
+    background: #DD1010;
+}
+div#grid > .box[data-tile="goal"]{
+    background: #10DD10;
+}
+div#grid > .box[data-tile="visited"]{
+    background: #DDDD10;
+}
