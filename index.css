@@ -48,3 +48,6 @@ div#grid > .box[data-tile="goal"]{
 div#grid > .box[data-tile="visited"]{
     background: #DDDD10;
 }
+div#grid > .box[data-tile="open"]{
+    background: #1010DD;
+}

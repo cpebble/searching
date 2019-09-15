@@ -31,18 +31,20 @@ function handle_block_click(ev){
 
 function get_neighbors(box){
     // Returns a list of box elements
-    col = parseInt(box.dataset.column);
-    row = parseInt(box.dataset.row);
+    let col = parseInt(box.dataset.column);
+    let row = parseInt(box.dataset.row);
     console.assert(col !== undefined, "Malformed box element", box)
     console.assert(row !== undefined, "Malformed box element", box)
     // Do a check of which boxes can be found
     let neighbors = [
-        get_box_by_coords(col, row-1),
-        get_box_by_coords(col, row+1),
-        get_box_by_coords(col-1, row),
-        get_box_by_coords(col+1, row),
-    ].filter(box=> box != null);
-    return neighbors;
+        get_box_by_coords(row, col-1),
+        get_box_by_coords(row, col+1),
+        get_box_by_coords(row-1, col),
+        get_box_by_coords(row+1, col),
+    ]
+        .filter(box=> box != null) // Filter out nulls
+        .filter(box=> box.dataset.tile != "wall"); // And walls
+    return neighbors; // Return the list
     
 }
 
