@@ -51,3 +51,6 @@ div#grid > .box[data-tile="visited"]{
 div#grid > .box[data-tile="open"]{
     background: #1010DD;
 }
+div#grid > .box[data-tile="path"]{
+    background: #1010DD;
+}
